@@ -5,11 +5,9 @@ Home: https://github.com/scikit-hep/histoprint
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/histoprint-feedstock/blob/master/LICENSE.txt)
 
 Summary: histoprint
-
-
 
 Current build status
 ====================
