@@ -1,20 +1,20 @@
 {% set name = "histoprint" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 8b7371a531b398e3328cbb7a49f6f6f2df234b75672e6c95028f442eda1a6c59
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: da7d156586430f0427d5f0e8f371787ae9c850bd9f64f928c14e90e2821c1baa
 
 build:
   number: 0
   noarch: python
   entry_points:
     - histoprint=histoprint.cli:histoprint
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,11 +32,11 @@ test:
     - histoprint --help
 
 about:
-  home: "https://github.com/scikit-hep/histoprint"
+  home: https://github.com/scikit-hep/histoprint
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "histoprint"
+  summary: histoprint
 
 extra:
   recipe-maintainers:
