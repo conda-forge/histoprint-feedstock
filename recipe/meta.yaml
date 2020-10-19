@@ -20,6 +20,8 @@ requirements:
   host:
     - pip
     - python
+    - setuptools_scm
+    - toml
   run:
     - click >=7.0.0
     - numpy >=1.0.0
