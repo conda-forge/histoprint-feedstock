@@ -1,5 +1,5 @@
 {% set name = "histoprint" %}
-{% set version = "1.6.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3dbaddd01f4ad8c3857df30ebc97a65c108dbd3ec6f9142bf2a04fbf30999f4
+  sha256: 16cfd857aa2a69e1177e10b58ffa1d6a84095e4714902a157a42e7e673ae9aea
 
 build:
   number: 0
@@ -19,13 +19,13 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools_scm
     - toml
   run:
     - click >=7.0.0
     - numpy >=1.0.0
-    - python
+    - python >=3.6
 
 test:
   imports:
