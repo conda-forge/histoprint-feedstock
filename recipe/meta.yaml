@@ -19,13 +19,13 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools_scm
     - toml
   run:
     - click >=7.0.0
     - numpy >=1.0.0
-    - python
+    - python >=3.6
 
 test:
   imports:
