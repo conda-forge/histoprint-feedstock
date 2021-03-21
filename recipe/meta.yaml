@@ -32,6 +32,9 @@ test:
     - histoprint
   commands:
     - histoprint --help
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/scikit-hep/histoprint
