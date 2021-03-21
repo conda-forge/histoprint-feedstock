@@ -1,5 +1,5 @@
 {% set name = "histoprint" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16cfd857aa2a69e1177e10b58ffa1d6a84095e4714902a157a42e7e673ae9aea
+  sha256: 3485cb8859ceee9bf3618d6d1d9bc464f0199f298c6d9c1d607381d36d6faecb
 
 build:
   number: 0
@@ -32,6 +32,9 @@ test:
     - histoprint
   commands:
     - histoprint --help
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/scikit-hep/histoprint
