@@ -26,6 +26,7 @@ requirements:
     - click >=7.0.0
     - numpy >=1.0.0
     - python >=3.6
+    - uhi >=0.2.1
 
 test:
   imports:
