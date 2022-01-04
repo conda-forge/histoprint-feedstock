@@ -1,5 +1,5 @@
 {% set name = "histoprint" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef8b65f7926aaa989f076857b76291175245dd974804b408483091d1e28b00f6
+  sha256: 0446b8ee7e4941401ad4e5cf416d916accea31ef5ab394aa46cd2a025bb7791b
 
 build:
   number: 0
