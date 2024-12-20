@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: histoprint
 
+Development: https://github.com/scikit-hep/histoprint
+
 Current build status
 ====================
 
