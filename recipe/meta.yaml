@@ -1,6 +1,6 @@
 {% set name = "histoprint" %}
-{% set version = "2.5.0" %}
-{% set python_min = "3.7" %}
+{% set version = "2.6.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9097e7396ab3a9a83c916f7e53c462ea46e4f645c1ad91604738f2d8383efd4f
+  sha256: e1df729350455b457e97f20883537ae74522879e7c33c609df12f247cca4a21d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - histoprint=histoprint.cli:histoprint
@@ -21,9 +21,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
-    - setuptools_scm
-    - toml
+    - hatchling
+    - hatch-vcs
   run:
     - click >=7.0.0
     - numpy >=1.0.0
