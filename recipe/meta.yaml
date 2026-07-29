@@ -1,5 +1,5 @@
 {% set name = "histoprint" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1df729350455b457e97f20883537ae74522879e7c33c609df12f247cca4a21d
+  sha256: 4fc1a27bf653eb22c9061f343f3c6efb9d1be0e8dfe53074a95a30170fe26b4e
 
 build:
   number: 0
