@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  name: histoprint
+  version: "2.7.0"
+  python_min: "3.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 4fc1a27bf653eb22c9061f343f3c6efb9d1be0e8dfe53074a95a30170fe26b4e
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - histoprint=histoprint.cli:histoprint
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+  run:
+    - click >=7.0.0
+    - numpy >=1.0.0
+    - python >=${{ python_min }}
+    - uhi >=0.2.1
+
+tests:
+  - python:
+      imports:
+        - histoprint
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - histoprint --help
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: histoprint
+  homepage: https://github.com/scikit-hep/histoprint
+  repository: https://github.com/scikit-hep/histoprint
+
+extra:
+  recipe-maintainers:
+    - conda-forge/scikit-hep
