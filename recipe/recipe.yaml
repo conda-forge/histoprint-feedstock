@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  name: histoprint
   version: "2.7.0"
   python_min: "3.10"
 
 package:
-  name: ${{ name|lower }}
+  name: histoprint
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/h/histoprint/histoprint-${{ version }}.tar.gz
   sha256: 4fc1a27bf653eb22c9061f343f3c6efb9d1be0e8dfe53074a95a30170fe26b4e
 
 build:
@@ -38,10 +37,11 @@ tests:
       imports:
         - histoprint
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
-        - pip
         - python ${{ python_min }}.*
     script:
       - histoprint --help
@@ -56,3 +56,4 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/scikit-hep
+    - ast0815
