@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.7.0"
+  version: "2.7.1"
   python_min: "3.10"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/h/histoprint/histoprint-${{ version }}.tar.gz
-  sha256: 4fc1a27bf653eb22c9061f343f3c6efb9d1be0e8dfe53074a95a30170fe26b4e
+  sha256: b5ec8096a8c666b6eb6dbbc3385bdeb11c278711b7c6b2671cbf9afc7b1f3417
 
 build:
   number: 0
